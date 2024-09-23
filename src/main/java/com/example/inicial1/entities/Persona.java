@@ -13,10 +13,7 @@ import java.io.Serializable;
 @Builder
 @Data
 @Audited
-public class Persona implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Persona extends Base{
 
     private String nombre;
 
