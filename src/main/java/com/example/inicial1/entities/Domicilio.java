@@ -18,7 +18,7 @@ public class Domicilio {
     private Long id;
     private String calle;
     private int numero;
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne(optional = false)
     @JoinColumn(name="fk_localidad")
     private Localidad localidad;
 }
