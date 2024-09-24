@@ -16,7 +16,7 @@ public class Libro {
     private String genero;
     private int paginas;
     private String titulo;
-    @ManyToMany(cascade = CascadeType.PERSIST)
+    @ManyToMany(cascade = CascadeType.REFRESH) //cambios en los autores reflejados en libros
     @JoinTable(
             name = "libro_autor",
             joinColumns = @JoinColumn(name = "libro_id"),
