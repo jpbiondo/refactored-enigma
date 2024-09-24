@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @CrossOrigin(origins = "*")
 @RequestMapping(path = "api/v1/personas")
-public class PersonaController {
+public class PersonaController extends BaseControllerImpl {
     private PersonaServiceImpl personaServiceImpl;
     public PersonaController(PersonaServiceImpl personaServiceImpl) {
         this.personaServiceImpl = personaServiceImpl;
