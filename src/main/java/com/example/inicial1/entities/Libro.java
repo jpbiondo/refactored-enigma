@@ -11,7 +11,7 @@ import java.util.Set;
 @Entity
 @Audited
 @Data
-public class Libro {
+public class Libro extends Base {
     private Date fecha;
     private String genero;
     private int paginas;
