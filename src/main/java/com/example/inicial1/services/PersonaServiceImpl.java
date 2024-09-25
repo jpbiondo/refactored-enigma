@@ -4,6 +4,8 @@ import com.example.inicial1.entities.Persona;
 import com.example.inicial1.repositories.BaseRepository;
 import com.example.inicial1.repositories.PersonaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,8 +23,18 @@ public class PersonaServiceImpl extends BaseServiceImpl<Persona, Long> implement
     @Override
     public List<Persona> search(String filtro) throws Exception {
         try {
-            return this.personaRepository.findByNombreContainingOrApellidoContaining(filtro, filtro);
+            //return this.personaRepository.findByNombreContainingOrApellidoContaining(filtro, filtro);
+            return this.personaRepository.searchNativo(filtro);
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
+        }
+    }
 
+    @Override
+    public Page<Persona> search(String filtro, Pageable pageable) throws Exception {
+        try {
+            //return this.personaRepository.findByNombreContainingOrApellidoContaining(filtro, filtro);
+            return this.personaRepository.searchNativo(filtro, pageable);
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         }
