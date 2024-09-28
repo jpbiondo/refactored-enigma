@@ -1,5 +1,5 @@
-# Trabajo Práctico REST API
-Es un proyecto donde se realiza una API REST hecha con Spring. Provee endpoints para las operaciones CRUD de una entidad Persona
+# Trabajo Práctico REST API 2
+Es un proyecto donde se realiza una API REST hecha con Spring. Provee endpoints para las operaciones CRUD para las entidades Persona, Localidad y Autor.
 
 ## Ejecución del proyecto
 Los pasos 2 y 3 pueden omitirse si tu IDE provee plug-ins que se encarguen de las dependencias del proyecto y permitan ejecutarlo.
